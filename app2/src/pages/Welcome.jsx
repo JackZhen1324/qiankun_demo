@@ -17,6 +17,7 @@ export default () => {
   return (
     <PageContainer>
       <Card>
+        <h1>app3</h1>
         <Alert
           message={intl.formatMessage({
             id: 'pages.welcome.alertMessage',

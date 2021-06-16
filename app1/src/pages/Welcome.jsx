@@ -17,6 +17,8 @@ export default () => {
   return (
     <PageContainer>
       <Card>
+        <h1>app1</h1>
+        <a href='/welcome' >返回</a>
         <Alert
           message={intl.formatMessage({
             id: 'pages.welcome.alertMessage',
@@ -40,7 +42,7 @@ export default () => {
             <FormattedMessage id="pages.welcome.link" defaultMessage="Welcome" />
           </a>
         </Typography.Text>
-        <CodePreview>yarn add @ant-design/pro-table</CodePreview>
+        <CodePreview>yarn2 add @ant-design/pro-table</CodePreview>
         <Typography.Text
           strong
           style={{

@@ -23,15 +23,28 @@ export default [
             component: '../layouts/BasicLayout',
             authority: ['admin', 'user'],
             routes: [
+             
               {
                 path: '/',
-                redirect: '/welcome',
+                redirect: '/',
               },
               {
-                path: '/welcome',
-                name: 'welcome',
+                path: '/',
+                name: '主应用',
                 icon: 'smile',
                 component: './Welcome',
+              },
+              {
+                path: '/app1',
+                name: '子应用1(路由挂载）',
+                icon: 'smile',
+                microApp:'app1'    
+              },
+              {
+                path: '/app2',
+                name: '子应用2(手动加载）',
+                icon: 'smile',
+                component:'./App2'    
               },
               {
                 path: '/admin',

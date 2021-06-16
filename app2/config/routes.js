@@ -25,11 +25,23 @@ export default [
             routes: [
               {
                 path: '/',
-                redirect: '/welcome',
+                redirect: '/app2',
               },
               {
                 path: '/welcome',
-                name: 'welcome',
+                name: '主应用',
+                icon: 'smile',
+                microApp:'main'    
+              },
+              {
+                path: '/app1',
+                name: '子应用(路由挂载）',
+                icon: 'smile',
+                microApp:'app1'    
+              },
+              {
+                path: '/app2',
+                name: '子应用(手动挂载）',
                 icon: 'smile',
                 component: './Welcome',
               },

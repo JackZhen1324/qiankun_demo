@@ -99,7 +99,7 @@ const BasicLayout = (props) => {
   const { formatMessage } = useIntl();
   return (
     <ProLayout
-      logo={logo}
+      //logo={logo}
       formatMessage={formatMessage}
       {...props}
       {...settings}

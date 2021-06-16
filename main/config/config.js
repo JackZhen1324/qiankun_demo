@@ -7,6 +7,25 @@ const { REACT_APP_ENV } = process.env;
 export default defineConfig({
   hash: true,
   antd: {},
+  qiankun: {
+    master: {
+      // 注册子应用信息
+      apps: [
+        {
+          name: 'app1', // 唯一 id
+          entry: '//localhost:7001', // html entry
+        },
+        {
+          name: 'app2', // 唯一 id
+          entry: '//localhost:7002/welcome', // html entry
+        },
+        {
+          name: 'main', // 唯一 id
+          entry: '//localhost:8000/welcome', // html entry
+        },
+      ],
+    },
+  },
   dva: {
     hmr: true,
   },
@@ -23,6 +42,7 @@ export default defineConfig({
   dynamicImport: {
     loading: '@/components/PageLoading/index',
   },
+  
   targets: {
     ie: 11,
   },
@@ -42,4 +62,5 @@ export default defineConfig({
   fastRefresh: {},
   esbuild: {},
   webpack5: {},
+  
 });
